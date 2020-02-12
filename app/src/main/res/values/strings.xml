@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">InstagramClone</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btnUpload">Upload</string>
+    <string name="btnSend">Send</string>
+    <string name="LaunchCamera">Launch Camera</string>
+    <string name="OpenGallery">Open Gallery</string>
+    <string name="OpenCloudPhotos">Open Cloud Photos</string>
+    <string name="Photo">Photo</string>
+    <string name="editTextPhotoDescription">Enter photo description</string>
+    <string name="editTextAddComment">Add a comment</string>
+    <string name="btnSignIn">Sign In</string>
+    <string name="btnCreateUser">Create User</string>
+    <string name="TextViewUsername">Username</string>
+    <string name="TextViewEmail">Email address</string>
+    <string name="TextViewPassword">Password</string>
+    <string name="main_menu_logout">Log Out</string>
+    <string name="Likes">Likes</string>
+    <string name="username">username</string>
+    <string name="TextView">TextView</string>
+
+</resources>

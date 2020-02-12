@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="Toolbars">#707291</color>
+    <color name="LaunchCamera">#CDA461</color>
+    <color name="OpenGallery">#DDD45F</color>
+    <color name="HomeButton">#F2F2F2</color>
+    <color name="Upload">#B3B3B3</color>
+
+</resources>

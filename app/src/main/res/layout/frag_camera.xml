@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imgLaunchCamera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/LaunchCamera"
+        android:contentDescription="@string/LaunchCamera"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/imgOpenGallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_takephoto_optimized_151x134" />
+
+    <ImageView
+        android:id="@+id/imgOpenGallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/OpenGallery"
+        android:contentDescription="@string/OpenGallery"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLaunchCamera"
+        app:srcCompat="@drawable/btn_uploadphoto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
