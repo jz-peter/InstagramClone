@@ -24,10 +24,10 @@ class FragCloudCollection : Fragment () {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.frag_cloud_collection, container, false)
-        val recyclerView: RecyclerView = view.findViewById(R.id.photo_recycler_view);
+        val recyclerView: RecyclerView = view.findViewById(R.id.photo_recycler_view)
 
         //Using GridLayoutManager to specify number of photos per row in RecyclerView
-        recyclerView.layoutManager = GridLayoutManager(context, 3);
+        recyclerView.layoutManager = GridLayoutManager(context, 3)
 
         val adapterCloudCollection = AdapterCloudCollection(photos)
         adapterCloudCollection.fragment = this

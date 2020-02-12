@@ -7,6 +7,7 @@
 
     <ImageView
         android:id="@+id/preview_photo_item"
+        android:contentDescription="@null"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="1dp"
@@ -24,6 +25,7 @@
 
     <ImageButton
         android:id="@+id/imageButtonLikeGray"
+        android:contentDescription="@null"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
@@ -36,11 +38,12 @@
 
     <ImageButton
         android:id="@+id/imageButtonLikeRed"
+        android:contentDescription="@null"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@android:color/white"
         android:scaleType="fitCenter"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textViewLikeCount"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +55,8 @@
         android:id="@+id/textViewLikeCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Likes"
-        android:layout_marginLeft="15dp"
+        android:hint="@string/Likes"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageButtonLikeGray"
         app:layout_constraintTop_toBottomOf="@id/preview_photo_item" />

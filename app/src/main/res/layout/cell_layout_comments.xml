@@ -7,13 +7,13 @@
         android:id="@+id/comments_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="username" />
+        android:text="@string/username" />
 
     <TextView
         android:id="@+id/comments_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/TextView" />
 
     <View
         android:layout_width="match_parent"

@@ -45,14 +45,13 @@ class FragSignIn: Fragment () {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
 
-                        var intent = Intent(activity, MainActivity::class.java).apply {}
+                        val intent = Intent(activity, MainActivity::class.java).apply {}
                         startActivity(intent)
                         activity!!.finish()
 
                         //Log.d(AppCompatActivity.TAG, "Login Success")
+                        Log.d(FragName, "Login Success")
 
-                         Log.d(FragName, "Login Success")
-                         val user = auth.currentUser
                         //updateUI(user)
 
                     } else {
@@ -69,7 +68,7 @@ class FragSignIn: Fragment () {
         btnCreateUser.setOnClickListener{
             val fragManager = activity!!.supportFragmentManager
             val createUserFrag = FragCreateUser()
-            var transaction = fragManager.beginTransaction()
+            val transaction = fragManager.beginTransaction()
             transaction.add(R.id.user_container, createUserFrag)
             transaction.addToBackStack(null)
             transaction.commit()

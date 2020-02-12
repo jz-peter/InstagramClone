@@ -64,26 +64,26 @@ class FragCreateUser: Fragment() {
                               .build()
 
                         user?.updateProfile(profileUpdates)
-                            ?.addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    Log.d(create, "User profile updated.")
-                                }
-
-                                val fragManager = activity!!.supportFragmentManager
-                                var transaction = fragManager!!.beginTransaction()
-                                transaction.remove(this)
-                                transaction.commit()
-                            }
-
-                    } else {
-                        // If create user fails, display a message to the user.
-                        Log.w(create, "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(context, "Create user failed. Please try again",
-                            Toast.LENGTH_SHORT).show()
-                        //updateUI(null)
-                    }
-                }
+                            ?.addOnCompleteListener { taskProfile ->
+        if (taskProfile.isSuccessful) {
+            Log.d(create, "User profile updated.")
         }
-        return view
+
+        val fragManager = activity!!.supportFragmentManager
+        val transaction = fragManager!!.beginTransaction()
+        transaction.remove(this)
+        transaction.commit()
     }
+
+} else {
+    // If create user fails, display a message to the user.
+    Log.w(create, "createUserWithEmail:failure", task.exception)
+    Toast.makeText(context, "Create user failed. Please try again",
+        Toast.LENGTH_SHORT).show()
+    //updateUI(null)
+}
+}
+}
+return view
+}
 }

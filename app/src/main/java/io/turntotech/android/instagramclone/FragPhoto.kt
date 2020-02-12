@@ -49,11 +49,11 @@ class FragPhoto : Fragment() {
         storage = FirebaseStorage.getInstance()
 
         // Create a storage reference from our app
-        var storageRef = storage.reference
+        val storageRef = storage.reference
 
-        val filename = UUID.randomUUID().toString()+".jpg"; //generate random filename for each photo
+        val filename = UUID.randomUUID().toString()+".jpg" //generate random filename for each photo
 
-        Log.d(TAG, "Filename: " + filename);
+        Log.d(TAG, "Filename: " + filename)
 
         val takenPhotoRef = storageRef.child("images/$filename")
 
@@ -63,7 +63,7 @@ class FragPhoto : Fragment() {
 
         // Create a child reference
         // imagesRef now points to "images"
-        var imagesRef: StorageReference? = storageRef.child("images")
+
 
         //Click Upload button to upload photo to Cloud (Firebase)
         btnUpload.setOnClickListener{
@@ -73,7 +73,7 @@ class FragPhoto : Fragment() {
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
             val data = baos.toByteArray()
 
-            var uploadTask = takenPhotoRef.putBytes(data)
+            val uploadTask = takenPhotoRef.putBytes(data)
 
             uploadTask.addOnFailureListener {
                 // Handle unsuccessful uploads
@@ -96,7 +96,7 @@ class FragPhoto : Fragment() {
                     }
 
                 Toast.makeText(activity, "Photo Uploaded", Toast.LENGTH_LONG).show()
-                var transaction = fragManager!!.beginTransaction()
+                val transaction = fragManager!!.beginTransaction()
                 transaction.remove(this)
                 transaction.commit()
             }

@@ -66,8 +66,8 @@ class FragCloudPhoto: Fragment() {
         btnSend = view.findViewById(R.id.btnSend)
         commentsRecyclerView = view.findViewById(R.id.commentsRecyclerView)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.commentsRecyclerView);
-        recyclerView.layoutManager = GridLayoutManager(context, 1);
+        val recyclerView: RecyclerView = view.findViewById(R.id.commentsRecyclerView)
+        recyclerView.layoutManager = GridLayoutManager(context, 1)
 
         adapterCloudComments = AdapterCloudComments(bitmapFromViewholder, comments)
         adapterCloudComments.fragment = this
@@ -93,7 +93,7 @@ class FragCloudPhoto: Fragment() {
                 Log.w(TAG, "Error adding document", e)
             }
         editTextAddComment.text.clear()
-        editTextAddComment.onEditorAction(EditorInfo.IME_ACTION_DONE);
+        editTextAddComment.onEditorAction(EditorInfo.IME_ACTION_DONE)
         Toast.makeText(activity, "Comment Posted", Toast.LENGTH_LONG).show()
     }
 
@@ -133,7 +133,7 @@ class FragCloudPhoto: Fragment() {
             likeCount = snapshot!!.documents.size
             userLiked = false
 
-            for (document in snapshot!!) {
+            for (document in snapshot) {
                  if( document.id == displayName ){
                      userLiked = true
                  }
@@ -143,8 +143,8 @@ class FragCloudPhoto: Fragment() {
     }
 
     fun removeLike() {
-        val likeData = hashMapOf(
-            "liked" to 1)
+//        val likeData = hashMapOf(
+//            "liked" to 1)
 
         val auth = FirebaseAuth.getInstance()
         auth.currentUser?.displayName?.let {
@@ -162,8 +162,8 @@ class FragCloudPhoto: Fragment() {
     }
 
     fun addLike(){
-        val likeData = hashMapOf(
-             "liked" to 1)
+//        val likeData = hashMapOf(
+////             "liked" to 1)
 
         val auth = FirebaseAuth.getInstance()
         auth.currentUser?.displayName?.let {
